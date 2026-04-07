@@ -1,6 +1,6 @@
-# Curso Completo Magento 2 — De Laravel Developer a Magento Expert
+# Curso Completo Magento 2 — De Cero a Expert
 
-> **Nivel**: Intermedio-Avanzado. Se asume conocimiento de PHP, POO, Laravel y patrones de diseño.
+> **Nivel**: Intermedio-Avanzado. Se asume conocimiento de PHP, POO y patrones de diseño.
 > **Enfoque**: 100% developer. Arquitectura, código, patrones y buenas prácticas. No administración.
 > **Metodología**: Cada subcapítulo tiene su `.md` en `/modulos/` con teoría, código real y ejercicios.
 > ✅ = Completado | ⬜ = Pendiente | 🔄 = Comparación con Laravel | 💡 = Tip profesional
