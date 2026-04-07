@@ -43,7 +43,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 | 2.2 | [Crear Comandos CLI Propios](modulos/2.2-custom-cli-commands.md) | Extender `bin/magento` con tus propios comandos (como Artisan Commands) | ✅ |
 | 2.3 | [Xdebug, Logging y Debugging](modulos/2.3-debugging.md) | Setup de Xdebug, `var/log/`, Monolog, debug tips que salvan vidas | ✅ |
 | 2.4 | [Configuración: env.php, config.php](modulos/2.4-configuracion.md) | Cómo Magento gestiona configuración (sin `.env` limpio como Laravel) | ✅ |
-| 2.5 | [Composer en Magento: gestión de dependencias](modulos/2.5-composer.md) | Cómo Magento usa Composer, autoloading y repositorios privados | ⬜ |
+| 2.5 | [Composer en Magento: gestión de dependencias](modulos/2.5-composer.md) | Cómo Magento usa Composer, autoloading y repositorios privados | ✅ |
 
 ---
 
