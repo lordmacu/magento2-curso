@@ -7,7 +7,7 @@ src = "."                  # usa el directorio curso/ como fuente
 
 [build]
 build-dir = "book-output"  # el sitio generado va aquí (no contamina los .md)
-create-missing = false     # no crear archivos vacíos automáticamente
+create-missing = true      # crea placeholder para módulos pendientes
 
 [output.html]
 theme = "default"
