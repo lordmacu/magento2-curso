@@ -108,7 +108,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
-| 7.1 | [Request Routing: routes.xml y Front Controllers](modulos/7.1-routing.md) | El sistema de routing de Magento y cómo el Front Controller despacha requests | ⬜ |
+| 7.1 | [Request Routing: routes.xml y Front Controllers](modulos/7.1-routing.md) | El sistema de routing de Magento y cómo el Front Controller despacha requests | ✅ |
 | 7.2 | [Controllers: una clase por Action](modulos/7.2-controllers.md) | Por qué cada acción es una clase separada (vs métodos en Laravel) | ⬜ |
 | 7.3 | [ResultFactory: tipos de respuesta](modulos/7.3-result-factory.md) | Page, JSON, Redirect, Raw, Forward — y cuándo usar cada uno | ⬜ |
 | 7.4 | [Request Object: parámetros, headers y validación](modulos/7.4-request.md) | Manejar GET, POST, JSON y validar inputs | ⬜ |
