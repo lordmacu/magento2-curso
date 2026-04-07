@@ -1,0 +1,18 @@
+/* Custom theme para el curso Magento 2 */
+:root {
+    --sidebar-width: 280px;
+}
+
+.chapter li.chapter-item {
+    font-size: 0.9em;
+}
+
+/* Resaltar comparaciones Laravel */
+blockquote {
+    border-left: 4px solid #f05340;
+}
+
+/* Tips en verde */
+code {
+    background-color: rgba(240, 83, 64, 0.08);
+}

@@ -1,0 +1,28 @@
+[book]
+title = "Magento 2 — De Laravel Developer a Expert"
+description = "Curso completo de Magento 2 con enfoque en desarrollo backend, frontend headless y arquitectura avanzada."
+authors = ["Cristian"]
+language = "es"
+src = "."                  # usa el directorio curso/ como fuente
+
+[build]
+build-dir = "book-output"  # el sitio generado va aquí (no contamina los .md)
+create-missing = false     # no crear archivos vacíos automáticamente
+
+[output.html]
+theme = "default"
+default-theme = "navy"
+preferred-dark-theme = "ayu"
+git-repository-url = ""
+no-section-label = false
+additional-css = ["theme/custom.css"]
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
