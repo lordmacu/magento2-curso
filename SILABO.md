@@ -81,7 +81,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
-| 5.1 | [Plugin Overview: qué son y cuándo usarlos](modulos/5.1-plugin-overview.md) | Interceptors vs Observers vs Preferences — cuándo usar cada uno | ⬜ |
+| 5.1 | [Plugin Overview: qué son y cuándo usarlos](modulos/5.1-plugin-overview.md) | Interceptors vs Observers vs Preferences — cuándo usar cada uno | ✅ |
 | 5.2 | [Before Plugin: modificar argumentos de entrada](modulos/5.2-before-plugin.md) | Interceptar antes de que se ejecute un método y cambiar sus parámetros | ⬜ |
 | 5.3 | [After Plugin: modificar el resultado](modulos/5.3-after-plugin.md) | Interceptar después de un método y transformar lo que devuelve | ⬜ |
 | 5.4 | [Around Plugin: control total del método](modulos/5.4-around-plugin.md) | Envolver completamente un método — el más potente y el más peligroso | ⬜ |
