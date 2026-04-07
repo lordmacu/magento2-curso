@@ -96,7 +96,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
 | 6.1 | [Events y Observers: arquitectura y flujo](modulos/6.1-events-overview.md) | Cómo funciona el sistema de eventos, diferencias con Laravel Events | ✅ |
-| 6.2 | [Registrar un Observer: events.xml](modulos/6.2-events-xml.md) | Declarar listeners de eventos por área (frontend, adminhtml, global) | ⬜ |
+| 6.2 | [Registrar un Observer: events.xml](modulos/6.2-events-xml.md) | Declarar listeners de eventos por área (frontend, adminhtml, global) | ✅ |
 | 6.3 | [Disparar Eventos Propios](modulos/6.3-dispatch-events.md) | Crear y disparar tus propios eventos desde tu módulo | ⬜ |
 | 6.4 | [Eventos del Core más importantes](modulos/6.4-core-events.md) | Los 20 eventos del core que más usarás en proyectos reales | ⬜ |
 | 6.5 | [Plugin vs Observer vs Preference: cuándo usar cada uno](modulos/6.5-plugin-vs-observer.md) | La guía definitiva para elegir el mecanismo de extensión correcto | ⬜ |
