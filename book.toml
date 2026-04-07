@@ -10,10 +10,9 @@ build-dir = "book-output"  # el sitio generado va aquí (no contamina los .md)
 create-missing = true      # crea placeholder para módulos pendientes
 
 [output.html]
-theme = "default"
 default-theme = "navy"
 preferred-dark-theme = "ayu"
-git-repository-url = ""
+git-repository-url = "https://github.com/lordmacu/magento2-curso"
 no-section-label = false
 additional-css = ["theme/custom.css"]
 
