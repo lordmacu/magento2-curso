@@ -16,3 +16,14 @@ blockquote {
 code {
     background-color: rgba(240, 83, 64, 0.08);
 }
+
+/* Reproductor de audio sticky — flota al hacer scroll */
+audio {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 6px 6px;
+}
