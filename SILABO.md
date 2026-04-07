@@ -71,7 +71,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 | 4.5 | [Proxies: lazy loading de dependencias pesadas](modulos/4.5-proxies.md) | Cómo Magento difiere la carga de clases costosas hasta que se necesitan | ✅ |
 | 4.6 | [Virtual Types: alias de configuración en di.xml](modulos/4.6-virtual-types.md) | Crear instancias configuradas de una clase sin heredar ni modificar | ✅ |
 | 4.7 | [Preferences: reemplazar una clase del core](modulos/4.7-preferences.md) | Override completo de una clase (úsalo solo cuando no quede otra opción) | ✅ |
-| 4.8 | [Shared vs Non-Shared: Singleton vs Transient](modulos/4.8-shared-nonshared.md) | Cuándo Magento reutiliza instancias y cuándo crea nuevas | ⬜ |
+| 4.8 | [Shared vs Non-Shared: Singleton vs Transient](modulos/4.8-shared-nonshared.md) | Cuándo Magento reutiliza instancias y cuándo crea nuevas | ✅ |
 | 4.9 | [setup:di:compile: qué hace y por qué importa](modulos/4.9-di-compile.md) | El proceso de compilación del DI: generación de código y proxies | ⬜ |
 
 ---
