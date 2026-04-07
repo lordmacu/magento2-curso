@@ -24,13 +24,13 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
 | 1.1 | [Magento vs Laravel: Mentalidad y Filosofía](modulos/1.1-magento-vs-laravel.md) | Por qué Magento es así, qué problemas resuelve, cuándo usarlo | ✅ |
-| 1.2 | [Overview de la Arquitectura de Magento 2](modulos/1.2-arquitectura-overview.md) | Las capas de la arquitectura: cómo se comunican entre sí | ⬜ |
-| 1.3 | [Magento Areas: frontend, adminhtml, webapi_rest, crontab, graphql](modulos/1.3-areas.md) | El sistema de "contextos" de Magento — algo sin equivalente en Laravel | ⬜ |
-| 1.4 | [Magento Layers: Presentation, Service, Domain, Persistence](modulos/1.4-layers.md) | Las capas de la arquitectura y qué código va en cada una | ⬜ |
-| 1.5 | [Estructura de Directorios: qué hace cada carpeta](modulos/1.5-estructura-directorios.md) | Navegar el proyecto sin perderse | ⬜ |
-| 1.6 | [Modos: Developer, Production, Default](modulos/1.6-modos.md) | Qué cambia en cada modo y su impacto en el flujo de trabajo | ⬜ |
-| 1.7 | [Request Lifecycle: del HTTP request al response](modulos/1.7-request-lifecycle.md) | Cómo Magento procesa una petición de principio a fin | ⬜ |
-| 1.8 | [Scope de Configuración: Global, Website, Store View](modulos/1.8-scopes.md) | El sistema multinivel de configuración — crítico para multistore | ⬜ |
+| 1.2 | [Overview de la Arquitectura de Magento 2](modulos/1.2-arquitectura-overview.md) | Las capas de la arquitectura: cómo se comunican entre sí | ✅ |
+| 1.3 | [Magento Areas: frontend, adminhtml, webapi_rest, crontab, graphql](modulos/1.3-areas.md) | El sistema de "contextos" de Magento — algo sin equivalente en Laravel | ✅ |
+| 1.4 | [Magento Layers: Presentation, Service, Domain, Persistence](modulos/1.4-layers.md) | Las capas de la arquitectura y qué código va en cada una | ✅ |
+| 1.5 | [Estructura de Directorios: qué hace cada carpeta](modulos/1.5-estructura-directorios.md) | Navegar el proyecto sin perderse | ✅ |
+| 1.6 | [Modos: Developer, Production, Default](modulos/1.6-modos.md) | Qué cambia en cada modo y su impacto en el flujo de trabajo | ✅ |
+| 1.7 | [Request Lifecycle: del HTTP request al response](modulos/1.7-request-lifecycle.md) | Cómo Magento procesa una petición de principio a fin | ✅ |
+| 1.8 | [Scope de Configuración: Global, Website, Store View](modulos/1.8-scopes.md) | El sistema multinivel de configuración — crítico para multistore | ✅ |
 
 ---
 
@@ -337,7 +337,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 ## Progreso General
 
 ```
-Módulo 1  — Arquitectura                        [=         ] 1/8
+Módulo 1  — Arquitectura                        [==========] 8/8 ✅
 Módulo 2  — Herramientas del Developer          [          ] 0/5
 Módulo 3  — Módulos                             [          ] 0/4
 Módulo 4  — Inyección de Dependencias           [          ] 0/9
@@ -359,5 +359,5 @@ Módulo 19 — Headless + React + Vanilla JS       [          ] 0/11
 Módulo 20 — Seguridad                           [          ] 0/3
 Módulo 21 — Proyecto Final                      [          ] 0/9
 
-Total: 1 / 145 subcapítulos completados
+Total: 8 / 145 subcapítulos completados
 ```
