@@ -64,7 +64,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
-| 4.1 | [DI en Magento: di.xml y el ObjectManager](modulos/4.1-di-xml.md) | Cómo funciona el contenedor de DI, diferencias con el IoC de Laravel | ⬜ |
+| 4.1 | [DI en Magento: di.xml y el ObjectManager](modulos/4.1-di-xml.md) | Cómo funciona el contenedor de DI, diferencias con el IoC de Laravel | ✅ |
 | 4.2 | [Argument Types Parte 1: object, string, boolean, null](modulos/4.2-argument-types-1.md) | Los tipos de argumentos que puedes inyectar vía di.xml | ⬜ |
 | 4.3 | [Argument Types Parte 2: array, init_parameter, const](modulos/4.3-argument-types-2.md) | Arrays de objetos, constantes de clase y parámetros de entorno en DI | ⬜ |
 | 4.4 | [Factory Classes: creación de objetos no-singleton](modulos/4.4-factory-classes.md) | El patrón Factory obligatorio para instanciar Models — auto-generado por Magento | ⬜ |
