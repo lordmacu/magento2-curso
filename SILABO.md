@@ -52,7 +52,7 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
-| 3.1 | [¿Qué es un Módulo? Anatomía y convenciones](modulos/3.1-que-es-un-modulo.md) | Estructura completa de un módulo vs un Service Provider de Laravel | ⬜ |
+| 3.1 | [¿Qué es un Módulo? Anatomía y convenciones](modulos/3.1-que-es-un-modulo.md) | Estructura completa de un módulo vs un Service Provider de Laravel | ✅ |
 | 3.2 | [Crear tu Primer Módulo: module.xml y registration.php](modulos/3.2-primer-modulo.md) | Registrar un módulo desde cero y entender el bootstrap | ⬜ |
 | 3.3 | [Sequence y dependencias entre módulos](modulos/3.3-module-sequence.md) | Cómo declarar que tu módulo depende de otro y el orden de carga | ⬜ |
 | 3.4 | [File Structure del Módulo: qué va dónde y por qué](modulos/3.4-module-file-structure.md) | La convención de directorios dentro de un módulo | ⬜ |
