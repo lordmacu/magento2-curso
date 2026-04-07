@@ -1,0 +1,4 @@
+book-output/
+.sync-state.json
+token.json
+credentials.json
