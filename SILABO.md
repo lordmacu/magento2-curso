@@ -139,14 +139,14 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
-| 9.1 | [El Sistema de Layout XML: la vista desde arriba](modulos/9.1-layout-xml.md) | Cómo Magento construye una página fusionando múltiples XMLs | ⬜ |
-| 9.2 | [Handles de Layout: cuándo se aplica cada XML](modulos/9.2-layout-handles.md) | `default.xml`, `catalog_product_view.xml` — los handles y su jerarquía | ⬜ |
-| 9.3 | [Blocks: la capa de lógica de presentación](modulos/9.3-blocks.md) | Qué es un Block, tipos de blocks y cómo conectarlos con templates | ⬜ |
-| 9.4 | [Templates .phtml: escribir vistas en Magento](modulos/9.4-templates-phtml.md) | La sintaxis de templates, helpers disponibles y mejores prácticas | ⬜ |
-| 9.5 | [ViewModels: separar lógica de presentación](modulos/9.5-viewmodels.md) | La forma moderna y correcta de pasar datos al template | ⬜ |
-| 9.6 | [Containers vs Blocks: estructura del árbol de layout](modulos/9.6-containers.md) | Contenedores como estructura, blocks como contenido | ⬜ |
-| 9.7 | [Override de Layouts y Templates del Core](modulos/9.7-override-layouts.md) | Sobrescribir vistas del core sin modificarlo | ⬜ |
-| 9.8 | [Traducciones (i18n): archivos .csv y __() helper](modulos/9.8-i18n.md) | El sistema de internacionalización de Magento | ⬜ |
+| 9.1 | [El Sistema de Layout XML: la vista desde arriba](modulos/9.1-layout-xml.md) | Cómo Magento construye una página fusionando múltiples XMLs | ✅ |
+| 9.2 | [Handles de Layout: cuándo se aplica cada XML](modulos/9.2-layout-handles.md) | `default.xml`, `catalog_product_view.xml` — los handles y su jerarquía | ✅ |
+| 9.3 | [Blocks: la capa de lógica de presentación](modulos/9.3-blocks.md) | Qué es un Block, tipos de blocks y cómo conectarlos con templates | ✅ |
+| 9.4 | [Templates .phtml: escribir vistas en Magento](modulos/9.4-templates-phtml.md) | La sintaxis de templates, helpers disponibles y mejores prácticas | ✅ |
+| 9.5 | [ViewModels: separar lógica de presentación](modulos/9.5-viewmodels.md) | La forma moderna y correcta de pasar datos al template | ✅ |
+| 9.6 | [Containers vs Blocks: estructura del árbol de layout](modulos/9.6-containers.md) | Contenedores como estructura, blocks como contenido | ✅ |
+| 9.7 | [Override de Layouts y Templates del Core](modulos/9.7-override-layouts.md) | Sobrescribir vistas del core sin modificarlo | ✅ |
+| 9.8 | [Traducciones (i18n): archivos .csv y __() helper](modulos/9.8-i18n.md) | El sistema de internacionalización de Magento | ✅ |
 
 ---
 
