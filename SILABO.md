@@ -123,14 +123,14 @@ Perfecto para convertir este curso en tu propio libro de referencia offline.
 
 | # | Subcapítulo | Objetivo | Estado |
 |---|---|---|---|
-| 8.1 | [La Trinidad: Model, ResourceModel, Collection](modulos/8.1-orm-magento.md) | Por qué son tres clases en vez de una como en Eloquent | ⬜ |
-| 8.2 | [Declarative Schema: db_schema.xml](modulos/8.2-declarative-schema.md) | Crear y modificar tablas — el equivalente moderno de las migrations de Laravel | ⬜ |
-| 8.3 | [Data Patches: el equivalente a los Seeders](modulos/8.3-data-patches.md) | Insertar o migrar datos en el ciclo de vida del módulo | ⬜ |
-| 8.4 | [EAV: Entity-Attribute-Value — el corazón del catálogo](modulos/8.4-eav.md) | El patrón EAV, por qué Magento lo usa y cómo trabajar con él | ⬜ |
-| 8.5 | [Repositories y Service Contracts](modulos/8.5-repositories.md) | El patrón Repository obligatorio y las interfaces de servicio | ⬜ |
-| 8.6 | [SearchCriteria y FilterGroups: queries complejas](modulos/8.6-searchcriteria.md) | El sistema de criterios de búsqueda de Magento | ⬜ |
-| 8.7 | [Colecciones: queries directas y joins avanzados](modulos/8.7-collections-advanced.md) | Cuando SearchCriteria no alcanza: colecciones con joins y subqueries | ⬜ |
-| 8.8 | [Transacciones y manejo de errores en DB](modulos/8.8-transacciones.md) | Transacciones, rollback y manejo correcto de excepciones de DB | ⬜ |
+| 8.1 | [La Trinidad: Model, ResourceModel, Collection](modulos/8.1-orm-magento.md) | Por qué son tres clases en vez de una como en Eloquent | ✅ |
+| 8.2 | [Declarative Schema: db_schema.xml](modulos/8.2-declarative-schema.md) | Crear y modificar tablas — el equivalente moderno de las migrations de Laravel | ✅ |
+| 8.3 | [Data Patches: el equivalente a los Seeders](modulos/8.3-data-patches.md) | Insertar o migrar datos en el ciclo de vida del módulo | ✅ |
+| 8.4 | [EAV: Entity-Attribute-Value — el corazón del catálogo](modulos/8.4-eav.md) | El patrón EAV, por qué Magento lo usa y cómo trabajar con él | ✅ |
+| 8.5 | [Repositories y Service Contracts](modulos/8.5-repositories.md) | El patrón Repository obligatorio y las interfaces de servicio | ✅ |
+| 8.6 | [SearchCriteria y FilterGroups: queries complejas](modulos/8.6-searchcriteria.md) | El sistema de criterios de búsqueda de Magento | ✅ |
+| 8.7 | [Colecciones: queries directas y joins avanzados](modulos/8.7-collections-advanced.md) | Cuando SearchCriteria no alcanza: colecciones con joins y subqueries | ✅ |
+| 8.8 | [Transacciones y manejo de errores en DB](modulos/8.8-transacciones.md) | Transacciones, rollback y manejo correcto de excepciones de DB | ✅ |
 
 ---
 
