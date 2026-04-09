@@ -17,21 +17,21 @@ code {
     background-color: rgba(240, 83, 64, 0.08);
 }
 
-/* Reproductor de audio — pegado debajo del nav-wrapper */
+/* Reproductor de audio — pegado debajo de #mdbook-menu-bar */
 #audio-bar {
-    width: 100%;
-    background: var(--bg, #1a1a2e);
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     position: sticky;
-    top: 50px; /* altura del nav-wrapper de mdBook */
-    z-index: 99;
+    top: var(--menu-bar-height, 50px);
+    z-index: 100;
+    width: 100%;
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 #audio-bar audio {
     width: 100%;
     display: block;
-    border-radius: 0;
     margin: 0;
+    border-radius: 0;
 }
