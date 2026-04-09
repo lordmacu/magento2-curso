@@ -8,72 +8,94 @@
     var wrapper = audioEl.closest('p') || audioEl.parentElement;
     if (!wrapper) return;
 
-    // Placeholder mantiene el espacio cuando wrapper está fixed
-    var placeholder = document.createElement('div');
-    placeholder.style.display = 'none';
-    wrapper.parentNode.insertBefore(placeholder, wrapper);
+    // Encontrar el contenedor que scrollea (mdBook usa un div interno, no window)
+    function getScrollParent(el) {
+      while (el && el !== document.body) {
+        var style = window.getComputedStyle(el);
+        if (style.overflowY === 'auto' || style.overflowY === 'scroll') return el;
+        el = el.parentElement;
+      }
+      return window;
+    }
 
-    var isFixed = false;
-    var originalTop = 0;
+    var scroller = getScrollParent(wrapper);
 
-    function getOriginalTop() {
-      // offsetTop relativo al scroll del contenedor
-      var el = wrapper;
+    // Guardar posición original ANTES de cualquier modificación al DOM
+    // offsetTop relativo al scrollParent
+    function getOffsetTop(el, parent) {
       var top = 0;
-      while (el) {
-        top += el.offsetTop || 0;
+      while (el && el !== parent) {
+        top += el.offsetTop;
         el = el.offsetParent;
       }
       return top;
     }
 
+    var triggerAt = getOffsetTop(wrapper, scroller === window ? document.body : scroller);
+
+    // Placeholder invisible para reservar el espacio
+    var placeholder = document.createElement('div');
+    placeholder.style.cssText = 'display:none;margin:0;padding:0;border:0;';
+    wrapper.parentNode.insertBefore(placeholder, wrapper);
+
+    var isFixed = false;
+
+    function getScrollTop() {
+      return scroller === window ? window.scrollY : scroller.scrollTop;
+    }
+
     function fix() {
-      var rect = wrapper.getBoundingClientRect();
-      placeholder.style.height  = rect.height + 'px';
+      var h = wrapper.offsetHeight;
+      var rect;
+
+      // Medir ANTES de fijar (una sola vez, sin loop)
+      if (scroller === window) {
+        rect = { left: wrapper.getBoundingClientRect().left, width: wrapper.offsetWidth };
+      } else {
+        rect = { left: wrapper.getBoundingClientRect().left, width: wrapper.offsetWidth };
+      }
+
+      placeholder.style.height  = h + 'px';
       placeholder.style.display = 'block';
 
-      wrapper.style.position   = 'fixed';
-      wrapper.style.top        = '0';
-      wrapper.style.left       = rect.left + 'px';
-      wrapper.style.width      = rect.width + 'px';
-      wrapper.style.zIndex     = '200';
-      wrapper.style.margin     = '0';
-      wrapper.style.padding    = '0';
-      wrapper.style.background = 'var(--bg, #1a1a2e)';
-      wrapper.style.boxShadow  = '0 2px 8px rgba(0,0,0,0.4)';
+      wrapper.style.cssText = [
+        'position:fixed',
+        'top:0',
+        'left:' + rect.left + 'px',
+        'width:' + rect.width + 'px',
+        'z-index:200',
+        'margin:0',
+        'padding:4px 0',
+        'background:var(--bg,#1a1a2e)',
+        'box-shadow:0 2px 8px rgba(0,0,0,0.5)',
+      ].join(';');
+
       isFixed = true;
     }
 
     function unfix() {
-      wrapper.style.cssText      = '';
-      placeholder.style.display  = 'none';
+      wrapper.style.cssText     = '';
+      placeholder.style.display = 'none';
       isFixed = false;
     }
 
     function onScroll() {
-      if (!isFixed) {
-        // Medir posición del wrapper real en pantalla
-        var top = wrapper.getBoundingClientRect().top;
-        if (top <= 0) {
-          originalTop = getOriginalTop();
-          fix();
-        }
-      } else {
-        // Medir posición del placeholder (ocupa el lugar original del wrapper)
-        var phTop = placeholder.getBoundingClientRect().top;
-        if (phTop > 0) {
-          unfix();
-        }
+      var scrollTop = getScrollTop();
+      if (!isFixed && scrollTop >= triggerAt) {
+        fix();
+      } else if (isFixed && scrollTop < triggerAt) {
+        unfix();
       }
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+    scroller.addEventListener('scroll', onScroll, { passive: true });
 
     window.addEventListener('resize', function () {
+      // Recalcular posición original por si cambia el layout
+      triggerAt = getOffsetTop(wrapper, scroller === window ? document.body : scroller);
       if (isFixed) {
-        var rect = placeholder.getBoundingClientRect();
-        wrapper.style.left  = rect.left + 'px';
-        wrapper.style.width = rect.width + 'px';
+        wrapper.style.left  = placeholder.getBoundingClientRect().left + 'px';
+        wrapper.style.width = placeholder.offsetWidth + 'px';
       }
     });
   });
