@@ -5,16 +5,15 @@
     var audioEl = document.querySelector('audio');
     if (!audioEl) return;
 
-    // Barra de título de mdBook — ya es sticky nativa
-    var menuBar = document.getElementById('mdbook-menu-bar');
+    var menuBar = document.getElementById('menu-bar');
     if (!menuBar) return;
 
-    // Crear contenedor del reproductor
-    var audioBar = document.createElement('div');
-    audioBar.id = 'audio-bar';
-    audioBar.appendChild(audioEl);
+    // Crear una fila dedicada al audio dentro del menu-bar
+    var audioRow = document.createElement('div');
+    audioRow.id = 'audio-bar';
+    audioRow.appendChild(audioEl);
 
-    // Insertar justo debajo del menu-bar
-    menuBar.parentNode.insertBefore(audioBar, menuBar.nextSibling);
+    // Insertar al final del #menu-bar
+    menuBar.appendChild(audioRow);
   });
 })();

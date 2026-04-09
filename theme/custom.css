@@ -17,16 +17,12 @@ code {
     background-color: rgba(240, 83, 64, 0.08);
 }
 
-/* Reproductor de audio — pegado debajo de #mdbook-menu-bar */
+/* Reproductor de audio — dentro del #menu-bar (ya es sticky nativo) */
 #audio-bar {
-    position: sticky;
-    top: var(--menu-bar-height, 50px);
-    z-index: 100;
     width: 100%;
-    background: var(--bg);
-    margin: 0;
     padding: 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    border-top: 1px solid var(--table-border-color);
 }
 
 #audio-bar audio {
