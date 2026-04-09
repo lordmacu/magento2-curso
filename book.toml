@@ -15,6 +15,7 @@ preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/lordmacu/magento2-curso"
 no-section-label = false
 additional-css = ["theme/custom.css"]
+additional-js  = ["theme/audio-sticky.js"]
 
 [output.html.search]
 enable = true
