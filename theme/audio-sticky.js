@@ -8,46 +8,70 @@
     var wrapper = audioEl.closest('p') || audioEl.parentElement;
     if (!wrapper) return;
 
-    // Sentinel: div invisible justo antes del wrapper
-    var sentinel = document.createElement('div');
-    sentinel.style.cssText = 'height:1px;margin:0;padding:0;border:0;';
-    wrapper.parentNode.insertBefore(sentinel, wrapper);
+    // Placeholder mantiene el espacio cuando wrapper está fixed
+    var placeholder = document.createElement('div');
+    placeholder.style.display = 'none';
+    wrapper.parentNode.insertBefore(placeholder, wrapper);
 
-    // Cuando el sentinel sale del viewport por arriba → fijar el reproductor
-    var observer = new IntersectionObserver(function (entries) {
-      var isAbove = !entries[0].isIntersecting &&
-                    entries[0].boundingClientRect.top < 0;
-      if (isAbove) {
-        // Calcular posición y ancho del área de contenido
-        var rect = wrapper.getBoundingClientRect();
-        var contentLeft = rect.left;
-        var contentWidth = rect.width;
+    var isFixed = false;
+    var originalTop = 0;
 
-        wrapper.style.position = 'fixed';
-        wrapper.style.top = '0';
-        wrapper.style.left  = contentLeft + 'px';
-        wrapper.style.width = contentWidth + 'px';
-        wrapper.style.zIndex = '200';
-        wrapper.style.margin = '0';
-        wrapper.style.padding = '0';
-        wrapper.style.background = 'var(--bg, #1a1a2e)';
-        wrapper.style.boxShadow = '0 2px 8px rgba(0,0,0,0.4)';
-
-        // Placeholder para evitar salto de contenido
-        sentinel.style.height = wrapper.offsetHeight + 'px';
-        sentinel.style.display = 'block';
-      } else {
-        wrapper.style.cssText = '';
-        sentinel.style.height = '1px';
+    function getOriginalTop() {
+      // offsetTop relativo al scroll del contenedor
+      var el = wrapper;
+      var top = 0;
+      while (el) {
+        top += el.offsetTop || 0;
+        el = el.offsetParent;
       }
-    }, { threshold: 0 });
+      return top;
+    }
 
-    observer.observe(sentinel);
+    function fix() {
+      var rect = wrapper.getBoundingClientRect();
+      placeholder.style.height  = rect.height + 'px';
+      placeholder.style.display = 'block';
 
-    // Recalcular ancho al redimensionar ventana
+      wrapper.style.position   = 'fixed';
+      wrapper.style.top        = '0';
+      wrapper.style.left       = rect.left + 'px';
+      wrapper.style.width      = rect.width + 'px';
+      wrapper.style.zIndex     = '200';
+      wrapper.style.margin     = '0';
+      wrapper.style.padding    = '0';
+      wrapper.style.background = 'var(--bg, #1a1a2e)';
+      wrapper.style.boxShadow  = '0 2px 8px rgba(0,0,0,0.4)';
+      isFixed = true;
+    }
+
+    function unfix() {
+      wrapper.style.cssText      = '';
+      placeholder.style.display  = 'none';
+      isFixed = false;
+    }
+
+    function onScroll() {
+      if (!isFixed) {
+        // Medir posición del wrapper real en pantalla
+        var top = wrapper.getBoundingClientRect().top;
+        if (top <= 0) {
+          originalTop = getOriginalTop();
+          fix();
+        }
+      } else {
+        // Medir posición del placeholder (ocupa el lugar original del wrapper)
+        var phTop = placeholder.getBoundingClientRect().top;
+        if (phTop > 0) {
+          unfix();
+        }
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     window.addEventListener('resize', function () {
-      if (wrapper.style.position === 'fixed') {
-        var rect = sentinel.getBoundingClientRect();
+      if (isFixed) {
+        var rect = placeholder.getBoundingClientRect();
         wrapper.style.left  = rect.left + 'px';
         wrapper.style.width = rect.width + 'px';
       }
