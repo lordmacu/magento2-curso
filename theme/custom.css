@@ -18,11 +18,19 @@ code {
 }
 
 /* Reproductor de audio — dentro del #menu-bar (ya es sticky nativo) */
+
+/* Forzar que #menu-bar envuelva a una segunda fila */
+#menu-bar {
+    flex-wrap: wrap;
+}
+
 #audio-bar {
+    flex: 0 0 100%;
     width: 100%;
     padding: 0;
     margin: 0;
     border-top: 1px solid var(--table-border-color);
+    order: 100;
 }
 
 #audio-bar audio {
